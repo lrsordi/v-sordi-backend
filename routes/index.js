@@ -37,5 +37,6 @@ exports = module.exports = function(app) {
 	app.get('/api/generalcontacts', keystone.middleware.api, routes.api.generalcontacts.list);
 	app.get('/api/categories', keystone.middleware.api, routes.api.categories.list);
 	app.get('/api/albums', keystone.middleware.api, routes.api.albums.list);
+	app.post('/api/email', keystone.middleware.api, routes.api.email.sendOne);
 
 }
