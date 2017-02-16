@@ -11,6 +11,13 @@ keystone.init({
 
 	'less': 'public',
 	'static': 'public',
+	'static options' : {
+		setHeaders : function(res, path, stat){
+			res.header("Access-Control-Allow-Origin", "*");
+	    res.header("Access-Control-Allow-Headers", "X-Requested-With");
+	   // next();
+		}
+	},
 	'favicon': 'public/favicon.ico',
 	'views': 'templates/views',
 	'compress':true,
