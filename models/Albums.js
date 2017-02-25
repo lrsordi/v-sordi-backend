@@ -19,7 +19,7 @@ Albums.add(
             dependsOn : {shownInHome:true},
             dest : 'public/upload/',
             filename: function(item, file){
-          		return item.id + '.' + file.extension
+          		return new Date().getTime() + '.' + file.extension
           	},
             format: function(item, file){
           		  return '<img src="/public/upload/'+file.filename+'" style="max-width: 300px">'
@@ -32,7 +32,18 @@ Albums.add(
   {albumCover : {type : Types.LocalFile,
             dest : 'public/upload/',
             filename: function(item, file){
-          		return item.id + '.' + file.extension
+          		return new Date().getTime() + '.' + file.extension
+          	},
+            format: function(item, file){
+          		  return '<img src="/public/upload/'+file.filename+'" style="max-width: 300px">'
+          	}
+            }
+  },
+  { heading: 'Photos Low Quality' },
+  {photosLowQuality : {type : Types.LocalFiles,
+            dest : 'public/upload/',
+            filename: function(item, file){
+          		return  new Date().getTime() + '.' + file.extension
           	},
             format: function(item, file){
           		  return '<img src="/public/upload/'+file.filename+'" style="max-width: 300px">'
@@ -44,10 +55,10 @@ Albums.add(
   {photos : {type : Types.LocalFiles,
             dest : 'public/upload/',
             filename: function(item, file){
-          		return item.id + '.' + file.extension
+          		return new Date().getTime() + '.' + file.extension;
           	},
             format: function(item, file){
-          		  return '<img src="/public/upload/'+file.filename+'" style="max-width: 300px">'
+          		  return '<a href="/public/upload/'+file.filename+'" style="max-width: 300px">LINKZ</a>'
           	}
             }
   }
