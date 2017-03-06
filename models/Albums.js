@@ -26,7 +26,7 @@ Albums.add(
           	}
             }
   },
-  {color : {type : Types.Color, default : '#000000', dependsOn : {shownInHome:true}, label : 'UI Color'}},
+  {isCoverInvertedColor : {type : Types.Boolean, default : false, dependsOn : {shownInHome:true}, label : 'Cover inverted color?'}},
   //
   { heading: 'Album Cover Image' },
   {albumCover : {type : Types.LocalFile,
@@ -39,6 +39,7 @@ Albums.add(
           	}
             }
   },
+  {isAlbumCoverInvertedColor : {type : Types.Boolean, default : false, dependsOn : {shownInHome:true}, label : 'Album cover inverted color?'}},
   { heading: 'Photos Low Quality' },
   {photosLowQuality : {type : Types.LocalFiles,
             dest : 'public/upload/',

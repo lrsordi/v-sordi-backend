@@ -24,7 +24,7 @@ keystone.init({
 	'cloudinary folders': true,
 	'cloudinary secure': true,
 	'view engine': 'jade',
-
+  'cookie secret' : '123',
 	'auto update': true,
 	'session': true,
 	'back url' : '/keystone',
