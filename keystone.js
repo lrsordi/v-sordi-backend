@@ -8,7 +8,7 @@ var keystone = require('keystone');
 keystone.init({
 	'name': 'Valéria Sordi - Backend',
 	'brand': 'Valéria Sordi - Backend',
-
+	'port' : '3010',
 	'less': 'public',
 	'static': 'public',
 	'static options' : {
